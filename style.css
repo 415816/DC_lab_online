@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif; 
+}
+body{
+     background: #efefef;
+}
+
+.divForm{
+    border: 1px solid black;
+    min-width: 700px;
+    max-width: 700px;
+    margin: 5px;
+    background: #fff;
+    margin: 2px;
+    padding: 4px;
+}
+
+.question1,  .question2,  .question3,  .question4,  .question5,  .question6,  .question7,  .question8,  .question9,  .question10,
+.question11, .question12, .question13, .question14, .question15, .question16, .question17, .question18, .question19, .question20,
+.question21, .question22, .question23, .question24, .question25, .question26, .question27, .question28, .question29, .question30 {
+    display: none;
+}
+
+.question-container{
+    display: flex;
+    max-width: 1500px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.divContCont{
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+.btnComplete, .closeStartMessage, .closeEndMessage, .btnNextQuestion{
+    border-radius: 5px;
+    min-height: 25px;
+    min-width: 170px;
+    margin: 5px;
+    font-size: 28px;
+    background-color: #5781e1;
+    color: #fff;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.btnComplete:hover, .closeStartMessage:hover, .closeEndMessage:hover, .btnNextQuestion:hover{
+    cursor: pointer;
+    background-color: #1f318e !important;
+    color: #ffffff !important;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+
+.divBtn{
+    margin: 0 auto;
+}
+
+#r{
+    float: right;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.startContainer{
+    display: block;
+    position: fixed;
+    z-index: 1600;
+    left: 0px;
+    top: 0px;
+
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.98);
+    overflow: auto;
+    margin: 0;
+   }
+
+.startMessage{
+    margin: 100px auto;
+    padding: 20px;
+    width: 40%;
+    z-index: 1700;
+    background-color: #efefef;
+    text-align: center;
+    font-size: 30px;
+}
+
+.endContainer{
+    display: none;
+    position: fixed;
+    z-index: 1600;
+    left: -10px;
+    top: -10px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.98);
+    overflow: auto;
+}
+.endMessage{
+    margin: 100px auto;
+    padding: 20px;
+    width: 40%;
+    z-index: 1700;
+    background-color: #efefef;
+    text-align: center;
+    font-size: 30px;
+}
+.questNumber{
+    border: 1px solid black;
+    width: 55px;
+    margin: 5px;
+    display: block;
+    text-align: center;
+}
+
+.questNumberBlock1, .questNumberBlock2, .questNumberBlock3 {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1055px;
+}
