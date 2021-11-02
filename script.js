@@ -349,6 +349,33 @@ function checkAnswers() {
     } else {
         appraisal.innerHTML = "не зачтены. Пересдача возможна по вторникам. Время и аудиторию Вы можете уточнить на стенде у 307 аудитории либо в группе ВК: https://vk.com/suti_roat";
     }
+
+
+
+    /* $(function() {
+        let request = {
+            'FIO': $(FIO).val(),
+            'score': score,
+            'ball': ball
+        }
+        $.post('/api.php', request, function (response) {
+            if (response != '1') { alert('Что-то пошло не так...');}
+        });
+        return false;
+    }); */
+
+    let xhr = new XMLHttpRequest();
+    xhr.open(POST, '/api.php', true);
+    let request = {
+        'FIO': $(FIO).val(),
+        'score': score,
+        'ball': ball
+    }
+    xhr.send([request]);
+
+
+
+
 }
 
 closeStartMessage.onclick = () => {
@@ -375,6 +402,7 @@ closeEndMessage.onclick = () => {
         passCloseMessage.value = '';
     }
 };
+
 
 function colorizedBedAns() {
     for (let i = 0; i < 30; i++) {
