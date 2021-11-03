@@ -101,6 +101,8 @@ let q = 0;
 
 const questNumber = document.querySelectorAll('.questNumber');
 
+let ball;
+
 const shuffle = (questionsArray) => {
     return questionsArray.sort(() => Math.round(Math.random() * 100) - 50);
 }
@@ -345,9 +347,11 @@ function checkAnswers() {
 
 
     if (score > 19) {
-        appraisal.innerHTML = "зачтены!";
+        ball = "зачтены!";
+        appraisal.innerHTML = ball;
     } else {
-        appraisal.innerHTML = "не зачтены. Пересдача возможна по вторникам. Время и аудиторию Вы можете уточнить на стенде у 307 аудитории либо в группе ВК: https://vk.com/suti_roat";
+        ball = "не зачтены. Пересдача возможна по вторникам. Время и аудиторию Вы можете уточнить на стенде у 307 аудитории либо в группе ВК: https://vk.com/suti_roat"
+        appraisal.innerHTML = ball;
     }
 
 
