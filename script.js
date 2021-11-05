@@ -369,9 +369,9 @@ function checkAnswers() {
     }); */
 
     let xhr = new XMLHttpRequest();
-    xhr.open(POST, '/api.php', true);
+    xhr.open('POST', '/api.php', true);
     let request = {
-        'FIO': $(FIO).val(),
+        'FIO': FIO.value,
         'score': score,
         'ball': ball
     }
