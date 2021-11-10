@@ -356,7 +356,7 @@ function checkAnswers() {
 
 
 
-    /* $(function() {
+    $(function() {
         let request = {
             'FIO': $(FIO).val(),
             'score': score,
@@ -366,20 +366,7 @@ function checkAnswers() {
             if (response != '1') { alert('Что-то пошло не так...');}
         });
         return false;
-    }); */
-
-    let xhr = new XMLHttpRequest();
-    xhr.open('POST', '/api.php', true);
-    let request = {
-        'FIO': FIO.value,
-        'score': score,
-        'ball': ball
-    }
-    xhr.send([request]);
-
-
-
-
+    });
 }
 
 closeStartMessage.onclick = () => {
@@ -412,37 +399,6 @@ function colorizedBedAns() {
     for (let i = 0; i < 30; i++) {
         if (divForm[i].getAttribute("name") == "badAnswer") {
             divForm[i].style.boxShadow = "0 0 5px red";
-            // lab1[3].style.textDecoration = "underline";
-            // lab2[2].style.textDecoration = "underline";
-            // lab3[1].style.textDecoration = "underline";
-            // lab4[1].style.textDecoration = "underline";
-            // lab5[2].style.textDecoration = "underline";
-            // lab6[0].style.textDecoration = "underline";
-            // lab7[0].style.textDecoration = "underline";
-            // lab8[1].style.textDecoration = "underline";
-            // lab9[2].style.textDecoration = "underline";
-            // lab10[0].style.textDecoration = "underline";
-            // lab11[1].style.textDecoration = "underline";
-            // lab12[2].style.textDecoration = "underline";
-            // lab13[3].style.textDecoration = "underline";
-            // lab14[1].style.textDecoration = "underline";
-            // lab15[0].style.textDecoration = "underline";
-            // lab16[0].style.textDecoration = "underline";
-            // lab17[2].style.textDecoration = "underline";
-            // lab18[0].style.textDecoration = "underline";
-            // lab19[2].style.textDecoration = "underline";
-            // lab20[0].style.textDecoration = "underline";
-            // lab21[2].style.textDecoration = "underline";
-            // lab22[1].style.textDecoration = "underline";
-            // lab23[2].style.textDecoration = "underline";
-            // lab24[1].style.textDecoration = "underline";
-            // lab25[1].style.textDecoration = "underline";
-            // lab26[1].style.textDecoration = "underline";
-            // lab27[1].style.textDecoration = "underline";
-            // lab28[0].style.textDecoration = "underline";
-            // lab28[1].style.textDecoration = "underline";
-            // lab29[0].style.textDecoration = "underline";
-            // lab30[0].style.textDecoration = "underline";
         }
     }
 }
