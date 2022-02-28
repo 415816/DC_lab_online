@@ -159,6 +159,10 @@ btnComplete.onclick = () => {
         questionsArray[i].style.display = "block";
     }
     endContainer.style.display = "block";
+  if(score >= 20){
+        endContainer.style.background = "rgba(33, 189, 1, 0.98)";
+    }
+    else {endContainer.style.background = "rgba(196, 0, 0, 0.98)";}
 }
 
 
@@ -350,7 +354,7 @@ function checkAnswers() {
         ball = "зачтены!";
         appraisal.innerHTML = ball;
     } else {
-        ball = "не зачтены. Пересдача возможна по вторникам. Время и аудиторию Вы можете уточнить на стенде у 307 аудитории либо в группе ВК: https://vk.com/suti_roat"
+        ball = "не зачтены. По поводу пересдачи уточняйте отдельно в MS Teams."
         appraisal.innerHTML = ball;
     }
 
@@ -369,7 +373,15 @@ function checkAnswers() {
     });
 }
 
-closeStartMessage.onclick = () => {
+closeStartMessage.onclick = () => startTest();
+FIO.addEventListener('keydown', function(e) {
+    if (e.keyCode === 13) {
+        startTest();
+    }
+})
+
+
+const startTest = () => {
     if (FIO.value != 0) {
         startContainer.style.display = "none";
         setInterval(function () {
